@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CreateList from './CreateList';
-import Lists from './Lists';
+import ListsContainer from "../containers/ListsContainer";
 
 import defaultState from '../default-state.json';
 import Users from './Users';
@@ -121,22 +121,10 @@ class Application extends Component {
         const { lists, users } = this.state;
         return (
             <main className="Application">
-                <Users
-                    // users={users}
-                    // onCreateUser={this.createUser}
-                    // onUpdateUser={this.updateUser}
-                />
+                <Users/>
                 <section>
-                    <CreateList onCreateList={this.createList} />
-                    {/* <Lists
-                        lists={lists}
-                        users={users}
-                        onCreateCard={this.createCard}
-                        onRemoveList={this.removeList}
-                        onRemoveCard={this.removeCard}
-                        onListChange={this.moveCardToList}
-                        onAssignCard={this.assignCard}
-                    /> */}
+                    <CreateList />
+                    <ListsContainer />
                 </section>
             </main>
         );
