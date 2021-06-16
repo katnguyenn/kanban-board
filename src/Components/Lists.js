@@ -5,7 +5,7 @@ const Lists = ({ lists = [] }) => {
     return (
         <section className="Lists">
             {lists.map((listId) => (
-                <ListContainer listd={listId} />
+                <ListContainer key={listId} listd={listId} />
             ))}
         </section>
     );
